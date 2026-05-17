@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Sprint Canvas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">AI Agent Workflow Demo</p>
+      <h1>Agent Sprint Canvas</h1>
+      <p class="hero-copy">
+        输入一个项目目标，生成可执行的 Agent 协作方案，包括任务拆解、角色分工、风险评估与交付清单。
+      </p>
+      <div class="hero-actions">
+        <button id="fill-sample" class="ghost-button">填充示例</button>
+        <button id="copy-summary" class="primary-button">复制项目摘要</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel input-panel">
+        <div class="panel-heading">
+          <h2>项目输入</h2>
+          <span class="panel-tag">Planner</span>
+        </div>
+
+        <label class="field">
+          <span>你要解决什么问题？</span>
+          <textarea id="goal-input" rows="8" placeholder="例如：我要做一个电商客服提效工具，帮助运营团队用 Agent 自动归类工单、生成回复建议，并把高风险问题升级给人工。"></textarea>
+        </label>
+
+        <div class="grid">
+          <label class="field">
+            <span>项目类型</span>
+            <select id="project-type">
+              <option value="automation">自动化</option>
+              <option value="service">客服与运营</option>
+              <option value="content">内容生产</option>
+              <option value="data">数据分析</option>
+              <option value="engineering">研发效率</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>交付周期</span>
+            <select id="timeline">
+              <option value="7">7 天</option>
+              <option value="14" selected>14 天</option>
+              <option value="30">30 天</option>
+              <option value="60">60 天</option>
+            </select>
+          </label>
+        </div>
+
+        <button id="generate-plan" class="primary-button wide-button">生成协作方案</button>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="panel-heading">
+          <h2>协作画布</h2>
+          <span class="panel-tag">Reviewer</span>
+        </div>
+
+        <div class="output-grid">
+          <article class="result-card accent-red">
+            <h3>项目定位</h3>
+            <p id="project-positioning">等待生成...</p>
+          </article>
+
+          <article class="result-card accent-blue">
+            <h3>Agent 分工</h3>
+            <ul id="agent-roles"></ul>
+          </article>
+
+          <article class="result-card accent-gold">
+            <h3>执行步骤</h3>
+            <ol id="execution-steps"></ol>
+          </article>
+
+          <article class="result-card accent-green">
+            <h3>风险与验证</h3>
+            <ul id="risks-and-checks"></ul>
+          </article>
+        </div>
+
+        <article class="markdown-panel">
+          <div class="panel-heading compact">
+            <h3>可复制到 README / 表单的摘要</h3>
+            <span class="panel-tag">Export</span>
+          </div>
+          <textarea id="markdown-output" rows="14" readonly></textarea>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
