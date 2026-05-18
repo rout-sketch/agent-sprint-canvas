@@ -1,37 +1,53 @@
 # Agent Sprint Canvas
 
-一个面向 AI Agent 场景的静态网页项目。输入一句项目目标，页面会自动生成任务拆解、Agent 分工、执行步骤、风险清单和可复制摘要，适合拿来做作品集起步仓库、演示页或立项说明助手。
+Agent Sprint Canvas is a lightweight AI workflow demo for turning a project idea into a structured execution plan. Given a short natural-language goal, the app generates task breakdowns, agent roles, execution steps, risk checks, and a reusable Markdown summary.
 
-## 为什么这个项目适合做 GitHub 展示
+这是一个纯前端静态项目，适合用来演示多 Agent 协作思路，也可以作为后续接入真实模型或工作流引擎的原型。
 
-- 主题明确：直接对应 Agent / AI 协作工作流。
-- 零依赖：纯 HTML、CSS、JavaScript，打开 `index.html` 就能运行。
-- 易部署：可以直接发布到 GitHub Pages。
-- 易扩展：后续可以接入真实模型、API 或工作流引擎。
+## Demo
 
-## 项目能力
+- Live site: [GitHub Pages](https://rout-sketch.github.io/agent-sprint-canvas/)
+- Repository: [rout-sketch/agent-sprint-canvas](https://github.com/rout-sketch/agent-sprint-canvas)
 
-- 把自然语言目标转成结构化执行方案
-- 自动生成 Planner / Research / Builder / Reviewer 四类 Agent 分工
-- 输出执行步骤、风险检查和人工兜底建议
-- 一键复制 Markdown 摘要，用于 README、需求文档或内部协作记录
+## Features
+
+- Turn a natural-language project goal into a structured execution plan
+- Simulate multi-agent collaboration with Planner, Research, Builder, and Reviewer roles
+- Generate execution steps, risk checks, and fallback guidance
+- Export a reusable Markdown summary for docs or internal planning
+
+## How It Works
+
+1. Enter a project goal in plain language
+2. Choose a project type and delivery timeline
+3. Generate a planning canvas with positioning, role assignment, steps, and risks
+4. Copy the generated summary for reuse in documentation or planning notes
 
 ## 本地运行
 
-直接双击打开 `index.html`，或者用任意静态服务器启动。
+直接打开 `index.html`，或者使用任意静态服务器启动。
+
+```bash
+# Example
+python -m http.server 8000
+```
 
 ## 部署到 GitHub Pages
 
-1. 在 GitHub 上新建仓库，比如 `agent-sprint-canvas`
-2. 把本目录文件上传到仓库根目录
-3. 在 GitHub 仓库 `Settings -> Pages` 中选择从当前分支部署
-4. 保存后等待几十秒，就会得到一个公开链接
+This repository is deployed from the `main` branch using GitHub Pages.
 
-## 使用场景
+## Use Cases
 
-- 在项目立项阶段快速生成执行方案草稿
-- 在 AI Agent 演示中展示多角色协作思路
-- 在团队内部用作需求拆解和风险检查模板
+- Early-stage project planning
+- Multi-agent workflow demos
+- Internal task breakdown and review templates
+
+## Roadmap
+
+- Support editable agent templates
+- Add shareable scenario presets
+- Integrate real LLM APIs for dynamic generation
+- Improve export formats for docs and presentation workflows
 
 ## 仓库结构
 
