@@ -20,12 +20,6 @@
 
 直接双击打开 `index.html`，或者用任意静态服务器启动。
 
-## 部署到 GitHub Pages
-
-1. 在 GitHub 上新建仓库，比如 `agent-sprint-canvas`
-2. 把本目录文件上传到仓库根目录
-3. 在 GitHub 仓库 `Settings -> Pages` 中选择从当前分支部署
-4. 保存后等待几十秒，就会得到一个公开链接
 
 ## 使用场景
 
