@@ -1,8 +1,8 @@
 # Agent Sprint Canvas
 
-Agent Sprint Canvas is a lightweight AI workflow demo for turning a project idea into a structured execution plan. Given a short natural-language goal, the app generates task breakdowns, agent roles, execution steps, risk checks, and a reusable Markdown summary.
+Agent Sprint Canvas is a lightweight front-end demo for turning a project idea into a structured execution plan. Given a short natural-language goal, the app generates task breakdowns, agent roles, execution steps, risk checks, and a reusable Markdown summary.
 
-这是一个纯前端静态项目，适合用来演示多 Agent 协作思路，也可以作为后续接入真实模型或工作流引擎的原型。
+It is built as a static prototype for showcasing multi-agent workflow design and can be extended later with real LLM APIs or workflow engines.
 
 ## Demo
 
@@ -31,10 +31,6 @@ Agent Sprint Canvas is a lightweight AI workflow demo for turning a project idea
 # Example
 python -m http.server 8000
 ```
-
-## 部署到 GitHub Pages
-
-This repository is deployed from the `main` branch using GitHub Pages.
 
 ## Use Cases
 
